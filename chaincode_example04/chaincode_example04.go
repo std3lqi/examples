@@ -89,7 +89,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
 	chainCodeToCall := t.GetChaincodeToCall()
 
 	f := "invoke"
-	invokeArgs := util.ToChaincodeArgs(f, "a", "b", "10")
+	invokeArgs := util.ToChaincodeArgs(f, "A", "B", "10")
 	response, err := stub.InvokeChaincode(chainCodeToCall, invokeArgs)
 	if err != nil {
 		errStr := fmt.Sprintf("Failed to invoke chaincode. Got error: %s", err.Error())
